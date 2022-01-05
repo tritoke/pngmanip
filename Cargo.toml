@@ -1,0 +1,18 @@
+[package]
+name = "pngmanip"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+cookie-factory = "0.3.2"
+crc32fast = "1.2.1"
+log = "0.4.14"
+nom = "7.1.0"
+
+[dev-dependencies]
+anyhow = "1.0.40"
+concat-idents = "1.1.2"
+env_logger = "0.8.3"
+rand = "0.8.3"
