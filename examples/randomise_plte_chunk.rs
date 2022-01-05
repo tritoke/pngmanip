@@ -19,7 +19,7 @@ fn main() -> Result<()> {
 
     let mut rng = thread_rng();
     let plte_chunk = image.get_first_chunk_mut("PLTE").unwrap();
-    //plte_chunk.chunk_data.try_fill(&mut rng)?;
+    plte_chunk.chunk_data.try_fill(&mut rng)?;
     plte_chunk.fix_crc();
 
     let out = fs::File::create("out.png")?;
