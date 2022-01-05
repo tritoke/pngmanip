@@ -13,7 +13,7 @@ I have written example solutions for both these style of challenges, as well as 
 The solution for this kind of challenge is generally to just fill the PLTE chunk with random data and re-calculate the chunk CRC.
 This will distort the colours of the image, but the duplicated ones will now look different:
 
-![](images/bob_ross.png)
+![](images/bob_ross_crc_fixed.png)
 
 `cargo run --example randomise_plte_chunk --release -- images/bob_ross.png`
 
@@ -25,7 +25,7 @@ The solution for this kind of challenge is to use the fact the IHDR's CRC value 
 The provided example tries widths/heights up to 10,000, reducing this number should significantly speed up runtime.
 Note: the example takes around a second on my laptop.
 
-![](images/dimensionless_loading.png)
+![](images/dimensionless_loading_error.png)
 
 `cargo run --example recover_dimensions_from_ihdr_crc --release -- images/dimensionless_loading.png`
 
